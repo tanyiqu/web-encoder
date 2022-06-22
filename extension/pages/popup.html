@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/popup.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="title">Hello Web-Encoder</h1>
+        <div class="text-top">
+            <textarea class="form-control" rows="8" id="before"></textarea>
+        </div>
+
+        <div class="inputs">
+            <select class="form-control form-inline" id="way" style="width: 150px;display: inline-block;">
+                <option value="Base64">Base64</option>
+                <option value="Url">Url</option>
+                <option value="Md5">Md5</option>
+  
+            </select>
+            <div class="btns">
+                <button class="button btn btn-primary" id="encode">编码</button>
+                <button class="button btn btn-success" id="decode">解码</button>
+            </div>
+        </div>
+
+        <div class="text-bottom">
+            <textarea class="form-control" rows="8" id="after"></textarea>
+        </div>
+
+        <div class="copy">
+            <a href="https://github.com/tanyiqu/web-encoder" target="_blank">Github</a>
+            <button class="button btn btn-success" id="decode">复制</button>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
