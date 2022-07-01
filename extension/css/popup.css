@@ -5,7 +5,7 @@
 
 
 body {
-    width: 460px;
+    width: 440px;
     /* height: 500px; */
     background: #123134;
 }
@@ -20,6 +20,7 @@ body {
 
 .title {
     color: aliceblue;
+    margin: 6px 0;
 }
 
 
@@ -29,9 +30,9 @@ body {
     justify-content: space-between;
 }
 
-.button {
-    width: 80px;
-}
+/* .button {
+    width: 100px;
+} */
 
 
 .copy{
