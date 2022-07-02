@@ -1,62 +1,57 @@
-
-/**
- * 封装toast提示
- */
- function Toast() {
-    this.position = 'toast-top-right';
-    this.timeOut = '1500';
-}
-initToast();
-function initToast() {
-    Toast.success = function (msg, position, timeOut) {
-        if (!position) {
-            position = this.position;
-        }
-        if (!timeOut) {
-            timeOut = this.timeOut;
-        }
-        toastr.options.positionClass = position;
-        toastr.options.timeOut = timeOut;
-        toastr.success(msg);
-    };
-    Toast.error = function (msg, position, timeOut) {
-        if (!position) {
-            position = this.position;
-        }
-        if (!timeOut) {
-            timeOut = this.timeOut;
-        }
-        toastr.options.positionClass = position;
-        toastr.options.timeOut = timeOut;
-        toastr.error(msg);
-    };
-    Toast.info = function (msg, position, timeOut) {
-        if (!position) {
-            position = this.position;
-        }
-        if (!timeOut) {
-            timeOut = this.timeOut;
-        }
-        toastr.options.positionClass = position;
-        toastr.options.timeOut = timeOut;
-        toastr.info(msg);
-    };
-}
-
-
 // 点击编码
-$('#encode').click(()=>{
-    alert('en')
+$('#encode').click(() => {
+    execute($('#content').val(), $('#algorithm').val(), 'encode')
 })
 
 
 // 点击解码
-$('#decode').click(()=>{
-    // alert('de')
-    
+$('#decode').click(() => {
+    execute($('#content').val(), $('#algorithm').val(), 'decode')
 })
 
 // 点击复制
-$('#copy').click(()=>{
-    Toast.success('复制成功','toast-top-full-width');
+$('#copy').click(() => {
+    let clipboard = new ClipboardJS('#copy', {
+        text: function () {
+            return $("#result").val();
+        }
+    });
+    Toast.success('复制成功');
+
 })
+
+
+
+
+/**
+ * 
+ * @param content 内容
+ * @param algorithm 加密/解密算法
+ * @param method 加密/解密
+ */
+function execute(content, algorithm, method) {
+
+    let Al = null;
+    let result = '';
+
+    switch (parseInt(algorithm)) {
+        case 1:
+            Al = Base64;
+            break
+        case 2:
+            Al = URLA;
+            break
+        case 3:
+            Al = MD5;
+            break
+    }
+
+    if (method == 'encode') {
+        result = Al.encode(content)
+    } else {
+        result = Al.decode(content)
+    }
+
+    $('#result').val(result);
+
+}
