@@ -1,23 +1,22 @@
 {
+  "manifest_version": 3,
   "name": "Web-Encoder",
-  "description": "Hello Web-Encoder",
   "version": "1.0.0",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "pages/popup.html",
-    "default_icon": "extensions.png"
-  },
+  
+
+  "description": "Hello Web-Encoder",
   "icons": {
     "16": "extensions.png",
     "48": "extensions.png",
     "128": "extensions.png"
   },
-  "background": {
-    "scripts": [
-      "js/background.js"
-    ]
-  },
-  "permissions": [
 
-  ]
+  "background": {
+    "service_worker": "js/background.js"
+  },
+
+  "action": {
+    "default_popup": "pages/popup.html",
+    "default_icon": "extensions.png"
+  }
 }
