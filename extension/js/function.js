@@ -44,6 +44,12 @@ function execute(content, algorithm, method) {
         case 3:
             Al = MD5;
             break
+        case 4:
+            Al = Unicode;
+            break
+        case 5:
+            Al = HTML;
+            break
     }
 
     if (method == 'encode') {
