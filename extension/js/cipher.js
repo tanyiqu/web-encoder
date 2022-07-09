@@ -13,12 +13,13 @@ class AlgorithmInterface {
 /**
  * Base64编码
  */
-const Base64 = new AlgorithmInterface();
-Base64.encode = (content) => {
-    return btoa(content)
+const Base64A = new AlgorithmInterface();
+Base64A.encode = (content) => {
+    return Base64.encode(content)
+    // return btoa(content)
 }
-Base64.decode = (content) => {
-    return atob(content)
+Base64A.decode = (content) => {
+    return Base64.decode(content)
 }
 
 

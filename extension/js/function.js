@@ -36,7 +36,7 @@ function execute(content, algorithm, method) {
 
     switch (parseInt(algorithm)) {
         case 1:
-            Al = Base64;
+            Al = Base64A;
             break
         case 2:
             Al = URLA;
