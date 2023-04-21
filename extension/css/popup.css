@@ -7,7 +7,7 @@
 body {
     width: 440px;
     /* height: 500px; */
-    background: #123134;
+    background: #123134;   
 }
 
 .container {
@@ -40,4 +40,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.copy a{
+    color: #fff;
 }

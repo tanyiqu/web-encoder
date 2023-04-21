@@ -50,6 +50,9 @@ function execute(content, algorithm, method) {
         case 5:
             Al = HTML;
             break
+        case 6:
+            Al = URLALLA;
+            break
     }
 
     if (method == 'encode') {
