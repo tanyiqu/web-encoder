@@ -317,3 +317,18 @@
     Object.keys(gBase64).forEach(function (k) { return gBase64.Base64[k] = gBase64[k]; });
     return gBase64;
 }));
+
+
+
+/**
+ * Base64编码
+ */
+ const Base64A = new AlgorithmInterface();
+ Base64A.encode = (content) => {
+     return Base64.encode(content)
+     // return btoa(content)
+ }
+ Base64A.decode = (content) => {
+     return Base64.decode(content)
+ }
+ 
