@@ -38,6 +38,9 @@ function execute(content, algorithm, method) {
         case 1:
             Al = Base64A;
             break
+        case 7:
+            Al = Base32A;
+            break
         case 2:
             Al = URLA;
             break
