@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Web-Encoder",
+  "version": "1.2.1",
+  "description": "Hello Web-Encoder",
+  "icons": {
+    "48": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon.png"
+    },
+    "default_popup": "pages/popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 440px;
+    /* height: 500px; */
+    background: #123134;   
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background: lawngreen; */
+}
+
+.title {
+    color: aliceblue;
+    margin: 6px 0;
+}
+
+
+.inputs {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .button {
+    width: 100px;
+} */
+
+
+.copy{
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.copy a{
+    color: #fff;
+}
